@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
         uiBeginAnimator.Play("BeginUI");
         yield return new WaitForSeconds(4f);
         uiInGame.SetActive(true);
+        Cursor.visible = false;
     }
 
     public void HandleHitScore(int score)
