@@ -18,6 +18,7 @@ public class Gun : MonoBehaviour
     public TextMeshProUGUI uiCurrentCapacity;
     public int capacity = 6;
     public Crosshair uiCrosshair;
+    public bool isLocked = false;
     private int currentCapacity = 0;
     private float lastFireTime = 0.0f;
 
@@ -28,6 +29,11 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        if (isLocked)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0) && currentCapacity > 0)
         {
             HandleFire();

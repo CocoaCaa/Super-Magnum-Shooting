@@ -18,5 +18,6 @@ public class MainMenu : MonoBehaviour
         animator.Play("MainMenuEnd");
         yield return new WaitForSeconds(0.5f);
         onReadyToStart.Invoke();
+        gameObject.SetActive(false);
     }
 }
