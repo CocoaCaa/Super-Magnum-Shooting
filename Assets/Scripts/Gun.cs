@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Gun : MonoBehaviour
 {
     [System.Serializable]
-    public class OnHitEvent : UnityEvent<int>
+    public class OnHitEvent : UnityEvent<Target, Vector3>
     {
     }
 
@@ -61,8 +61,7 @@ public class Gun : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(hitPoint, Vector2.zero);
         if (hit.collider != null)
         {
-            var score = hit.collider.GetComponent<Target>().score;
-            OnHit.Invoke(score);
+            OnHit.Invoke(hit.collider.GetComponent<Target>(), hitPoint);
 
             var newBulletHole = Instantiate(bulletHole);
             newBulletHole.transform.position = new Vector3(hitPoint.x, hitPoint.y, hit.transform.position.z);

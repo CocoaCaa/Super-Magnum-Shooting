@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI uiCountdown;
     public GameObject timesUpModal;
     public Gun gun;
+    public Canvas uiCanvas;
+    public GameObject prefabTargetScoreText;
 
     private int totalScore = 0;
     private float leftTime = 60.0f;
@@ -32,10 +34,12 @@ public class GameController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void HandleHitScore(int score)
+    public void HandleHitScore(Target target, Vector3 hitPoint)
     {
-        totalScore += score;
+        totalScore += target.score;
         uiScore.text = totalScore.ToString();
+        var targetScoreText = Instantiate(prefabTargetScoreText, uiCanvas.transform);
+        targetScoreText.GetComponent<TargetScoreText>().SetToTarget(uiCanvas.GetComponent<RectTransform>(), target.score, hitPoint);
     }
 
     private void Update()
