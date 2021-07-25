@@ -19,6 +19,9 @@ public class Gun : MonoBehaviour
     public int capacity = 6;
     public Crosshair uiCrosshair;
     public bool isLocked = false;
+    public AudioClip[] fireSound;
+    public AudioClip reloadSound;
+    public Animator animMuzzleFlare;
     private int currentCapacity = 0;
     private float lastFireTime = 0.0f;
 
@@ -72,18 +75,26 @@ public class Gun : MonoBehaviour
             var newBulletHoleSpriteRenderer = newBulletHole.GetComponent<SpriteRenderer>();
             newBulletHoleSpriteRenderer.sortingOrder = hitSpriteRenderer.sortingOrder + 1;
         }
+
+        GetComponent<AudioSource>().PlayOneShot(fireSound[Random.Range(0, fireSound.Length)], 0.4f);
+        animMuzzleFlare.Play("FireMuzzleFlare");
     }
 
     private IEnumerator HandleReload()
     {
-        if (currentCapacity == 0)
+        if (currentCapacity > 0)
         {
-            uiReloadProgressBar.time = reloadTime;
-            uiReloadProgressBar.gameObject.SetActive(true);
-            yield return new WaitForSeconds(reloadTime);
-            currentCapacity = capacity;
-            uiCurrentCapacity.text = currentCapacity.ToString();
+            yield break;
         }
+
+
+        GetComponent<Animator>().Play("GunReload");
+        GetComponent<AudioSource>().PlayOneShot(reloadSound);
+        uiReloadProgressBar.time = reloadTime;
+        uiReloadProgressBar.gameObject.SetActive(true);
+        yield return new WaitForSeconds(reloadTime);
+        currentCapacity = capacity;
+        uiCurrentCapacity.text = currentCapacity.ToString();
     }
 
     private void UpdateRotation()
