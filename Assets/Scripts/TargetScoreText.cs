@@ -5,7 +5,12 @@ using UnityEngine;
 
 public class TargetScoreText : MonoBehaviour
 {
+    private static readonly Color[] COLORS = new Color[] { Color.white, Color.yellow, Color.green, Color.cyan, Color.magenta };
+
     public TextMeshProUGUI text;
+    private int currentColorIdx = 0;
+    private float changeColorRate = 0.1f;
+    private float lastChangeColorTime = 0.0f;
 
     public void SetToTarget(RectTransform rectTransformCanvas, int score, Vector3 hitPoint)
     {
@@ -25,5 +30,15 @@ public class TargetScoreText : MonoBehaviour
         GetComponent<RectTransform>().localPosition = worldPosition - uiOffset;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    void Update()
+    {
+        if (Time.time > lastChangeColorTime + changeColorRate)
+        {
+            lastChangeColorTime = Time.time;
+            text.faceColor = COLORS[currentColorIdx];
+            currentColorIdx = (currentColorIdx + 1) % COLORS.Length;
+        }
     }
 }
