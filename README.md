@@ -6,7 +6,7 @@ A fan made mini-game references from [Super Animal Royale](https://animalroyale.
 
 This work is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International
 
-## Credit
+## Credits
 
 Arts & Develop by [CocoaCaa](https://twitter.com/cocoa_caa)
 
