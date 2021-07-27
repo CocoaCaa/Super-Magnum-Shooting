@@ -11,6 +11,13 @@ public class Gun : MonoBehaviour
     }
 
     public OnHitEvent OnHit;
+
+    [System.Serializable]
+    public class OnHitMoleCrateEvent : UnityEvent
+    {
+    }
+    public OnHitMoleCrateEvent OnHitMoleCrate;
+
     public GameObject bulletHole;
     public float fireRate = 0.37f;
     public float reloadTime = 1.3f;
@@ -64,7 +71,14 @@ public class Gun : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(hitPoint, Vector2.zero);
         if (hit.collider != null)
         {
-            OnHit.Invoke(hit.collider.GetComponent<Target>(), hitPoint);
+            if (hit.collider.GetComponent<MoleCrateTarget>() != null)
+            {
+                OnHitMoleCrate.Invoke();
+            }
+            else
+            {
+                OnHit.Invoke(hit.collider.GetComponent<Target>(), hitPoint);
+            }
 
             var newBulletHole = Instantiate(bulletHole);
             newBulletHole.transform.position = new Vector3(hitPoint.x, hitPoint.y, hit.transform.position.z);

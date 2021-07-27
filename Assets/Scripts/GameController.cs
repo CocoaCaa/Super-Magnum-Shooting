@@ -10,14 +10,20 @@ public class GameController : MonoBehaviour
     public GameObject uiInGame;
     public TextMeshProUGUI uiScore;
     public TextMeshProUGUI uiCountdown;
+    public TextMeshProUGUI uiRapidFire;
+    public AudioClip rapidFireStartSound;
     public GameObject timesUpModal;
     public Gun gun;
     public Canvas uiCanvas;
     public GameObject prefabTargetScoreText;
+    public MoleCrateSpawner moleCrateSpawner;
 
     private int totalScore = 0;
     private float leftTime = 60.0f;
     private bool isStarted = false;
+    private bool isRapidFire = false;
+    private float rapidFireLeftTime = 10.0f;
+    private float originalGunFireRate = 0.0f;
 
     public void StartGame()
     {
@@ -31,6 +37,7 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(4f);
         isStarted = true;
         uiInGame.SetActive(true);
+        moleCrateSpawner.StartSpawn();
         Cursor.visible = false;
     }
 
@@ -40,6 +47,19 @@ public class GameController : MonoBehaviour
         uiScore.text = totalScore.ToString();
         var targetScoreText = Instantiate(prefabTargetScoreText, uiCanvas.transform);
         targetScoreText.GetComponent<TargetScoreText>().SetToTarget(uiCanvas.GetComponent<RectTransform>(), target.score, hitPoint);
+    }
+
+    public void HandleMoleCrateHit()
+    {
+        if (isRapidFire)
+        {
+            return;
+        }
+        isRapidFire = true;
+        originalGunFireRate = gun.fireRate;
+        gun.fireRate = 0.1f;
+        uiRapidFire.gameObject.SetActive(true);
+        GetComponent<AudioSource>().PlayOneShot(rapidFireStartSound);
     }
 
     private void Update()
@@ -52,6 +72,18 @@ public class GameController : MonoBehaviour
             {
                 HandleEndedGame();
                 isStarted = false;
+            }
+        }
+
+        if (isRapidFire)
+        {
+            rapidFireLeftTime = Mathf.Max(rapidFireLeftTime - Time.deltaTime, 0);
+            uiRapidFire.text = "Rapid fire " + rapidFireLeftTime.ToString("0.0s");
+            if (rapidFireLeftTime <= 0)
+            {
+                isRapidFire = false;
+                uiRapidFire.gameObject.SetActive(false);
+                gun.fireRate = originalGunFireRate;
             }
         }
     }

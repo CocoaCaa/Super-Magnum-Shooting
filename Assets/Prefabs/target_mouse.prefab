@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 8
   direction: -1
-  speed: 4
+  speed: 5
 --- !u!60 &390990580
 PolygonCollider2D:
   m_ObjectHideFlags: 0
