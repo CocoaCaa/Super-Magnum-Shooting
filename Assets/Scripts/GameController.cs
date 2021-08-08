@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
@@ -78,13 +79,30 @@ public class GameController : MonoBehaviour
         if (isRapidFire)
         {
             rapidFireLeftTime = Mathf.Max(rapidFireLeftTime - Time.deltaTime, 0);
-            uiRapidFire.text = "Rapid fire " + rapidFireLeftTime.ToString("0.0s");
+            updateRapidFireText();
             if (rapidFireLeftTime <= 0)
             {
                 isRapidFire = false;
                 uiRapidFire.gameObject.SetActive(false);
                 gun.fireRate = originalGunFireRate;
             }
+        }
+    }
+
+    private void updateRapidFireText()
+    {
+        var op = LocalizationSettings.StringDatabase.GetLocalizedStringAsync(
+            "Main Text",
+            "inGame.rapidFire",
+            new string[] { rapidFireLeftTime.ToString("0.0s") }
+        );
+        if (op.IsDone)
+        {
+            uiRapidFire.text = op.Result;
+        }
+        else
+        {
+            op.Completed += (o) => uiRapidFire.text = o.Result;
         }
     }
 
