@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Main Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Main Text
+  m_TableCollectionNameGuidString: 6c5f76439ddcab445b10f6034dbea535
+  m_Entries:
+  - m_Id: 428355981312
+    m_Key: MainScene/Canvas/MainMenu/BtnStart/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10009064869888
+    m_Key: MainScene/Canvas/MainMenu/Text Background/Credit - CocoaCaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10971062046720
+    m_Key: MainScene/Canvas/MainMenu/Text Background/Credit - CocoaCaa 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11154449600512
+    m_Key: MainScene/Canvas/MainMenu/Text Background/Credit - CocoaCaa 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11527285477376
+    m_Key: MainScene/Canvas/MainMenu/Text Background/Credit - Jake Butineau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11549968273408
+    m_Key: MainScene/Canvas/MainMenu/Text Background/Credit - Jake Butineau 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11583493345280
+    m_Key: MainScene/Canvas/MainMenu/Text Background/Credit - Jake Butineau 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11780990537728
+    m_Key: MainScene/Canvas/Begin/Go
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12467895898112
+    m_Key: MainScene/Canvas/InGame/ReloadProgressBar/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12621424201728
+    m_Key: MainScene/Canvas/InGame/TimesUpModal/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12667318276096
+    m_Key: MainScene/Canvas/InGame/TimesUpModal/BtnRestart/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18042687950848
+    m_Key: inGame.rapidFire
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1628400469414

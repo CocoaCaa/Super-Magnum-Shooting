@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Main Text_zh-Hant
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: zh-Hant
+  m_SharedData: {fileID: 11400000, guid: 6c5f76439ddcab445b10f6034dbea535, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 428355981312
+    m_Localized: "\u958B\u59CB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10009064869888
+    m_Localized: "\u7531 CocoaCaa \u53EF\u7DA0 \u63D2\u756B\u53CA\u958B\u767C >\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10971062046720
+    m_Localized: "\u7531 CocoaCaa \u53EF\u7DA0 \u63D2\u756B\u53CA\u958B\u767C >"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11154449600512
+    m_Localized: "\u9EDE\u64CA\u5230 @cocoa_caa \u63A8\u7279"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11527285477376
+    m_Localized: "\"Super Animal Royale\" \u7684\u8072\u97F3\u6548\u679C\u4F86\u81EA
+      Jake Butineau >"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11549968273408
+    m_Localized: "\"Super Animal Royale\" \u7684\u8072\u97F3\u6548\u679C\u4F86\u81EA
+      Jake Butineau >"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11583493345280
+    m_Localized: "\u9EDE\u64CA\u5230 @jakebutineau \u63A8\u7279"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11780990537728
+    m_Localized: "\u958B\u706B\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12467895898112
+    m_Localized: "\u91CD\u65B0\u88DD\u586B\u4E2D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12621424201728
+    m_Localized: "\u6642\u9593\u5230\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12667318276096
+    m_Localized: "\u91CD\u65B0\u958B\u59CB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18042687950848
+    m_Localized: "\u9AD8\u901F\u5C04\u64CA {0}"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

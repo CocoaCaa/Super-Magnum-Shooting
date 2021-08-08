@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: 4f51645b88f356f4fb55c3329b63bcd2
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 0
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 0
+  m_maxConcurrentWebRequests: 500
+  m_ContiguousBundles: 0
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 
+  m_RemoteCatalogLoadPath:
+    m_Id: 
+  m_ContentStateBuildPath: 
+  m_overridePlayerVersion: 
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 545ef611085fafe428e2431840d11f68, type: 2}
+  - {fileID: 11400000, guid: a1189a95e7aa89b4ba7d004a2f1dc01b, type: 2}
+  - {fileID: 11400000, guid: dfffbb85db2d1a24cbe21ce0ca6f2bcd, type: 2}
+  - {fileID: 11400000, guid: 2fcd1ecf95b622949a9c41a6f56b4dbc, type: 2}
+  - {fileID: 11400000, guid: 773a05c72e7d31d4cab8526bf32f8cd8, type: 2}
+  - {fileID: 11400000, guid: aa71c7cf69b0e72429d6883bf777bcdb, type: 2}
+  - {fileID: 11400000, guid: 9d443f432ba0761478e51bbcd00fedd1, type: 2}
+  - {fileID: 11400000, guid: 82c02dbebab02d34993927e9b35f222d, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 1c666d02a8bed2e46bf37abbf3c3b48a
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 90633236ba3a9964e9576f7b384cc7ef
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: b640121dda2f49240a6028d75a196da1
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: a85f7c587a05b894d8f401b4de6aff18
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 7b0e1621e50cc7b4a867776c7b8b50b1
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: e91ca530cbe94a84f95849046d29e55f
+        m_Value: http://localhost/[BuildTarget]
+    m_ProfileEntryNames:
+    - m_Id: 90633236ba3a9964e9576f7b384cc7ef
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: b640121dda2f49240a6028d75a196da1
+      m_Name: LocalBuildPath
+      m_InlineUsage: 0
+    - m_Id: a85f7c587a05b894d8f401b4de6aff18
+      m_Name: LocalLoadPath
+      m_InlineUsage: 0
+    - m_Id: 7b0e1621e50cc7b4a867776c7b8b50b1
+      m_Name: RemoteBuildPath
+      m_InlineUsage: 0
+    - m_Id: e91ca530cbe94a84f95849046d29e55f
+      m_Name: RemoteLoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - Locale
+    - Locale-zh-Hant
+    - Locale-en
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 8310964229feeeb4cb057b64059e4e30, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: b89057194089aab49baec4f5aa39e52a, type: 2}
+  - {fileID: 11400000, guid: fed03aec8658b0046805db8c35d4df56, type: 2}
+  - {fileID: 11400000, guid: 56357b5479ab923418e3f8f7c481c335, type: 2}
+  - {fileID: 11400000, guid: 70a6335cab9666348b774bc179096b73, type: 2}
+  m_ActiveProfileId: 1c666d02a8bed2e46bf37abbf3c3b48a
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []
